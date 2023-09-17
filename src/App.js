@@ -1,17 +1,10 @@
 import { Box } from '@mui/material';
 import './App.css';
 import MainPage from './components/mainPage';
-import { useEffect } from 'react';
-import { getTasksFromLocalStorage, saveTasksToLocalStorage } from './helpers/services';
 
-function App({tasks}) {
-  useEffect(() => {
-    getTasksFromLocalStorage();
-   }, []);
- 
-   useEffect((tasks) => {
-     saveTasksToLocalStorage();
-   }, [tasks]);
+
+function App() {
+
   
   return (
     <Box style={{height:"100%",width:"100%"}}>
