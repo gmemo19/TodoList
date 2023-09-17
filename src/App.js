@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { Box } from '@mui/material';
 import './App.css';
+import MainPage from './components/mainPage';
+import { useEffect } from 'react';
+import { getTasksFromLocalStorage, saveTasksToLocalStorage } from './helpers/services';
 
-function App() {
+function App({tasks}) {
+  useEffect(() => {
+    getTasksFromLocalStorage();
+   }, []);
+ 
+   useEffect((tasks) => {
+     saveTasksToLocalStorage();
+   }, [tasks]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box style={{height:"100%",width:"100%"}}>
+<MainPage />
+    </Box>
   );
 }
 
