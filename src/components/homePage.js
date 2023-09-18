@@ -273,6 +273,7 @@ function HomePage() {
             justifyContent: "space-between",
             width: "750px",
             mt: 4,
+            mb:4,
           }}
         >
           <Button

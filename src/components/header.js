@@ -10,6 +10,7 @@ function Header() {
       sx={{
         bgcolor: "#000000",
         height: "80px",
+        minHeight:"80px",
         display: "flex",
         alignItems: "center",
         justifyContent:"center",
